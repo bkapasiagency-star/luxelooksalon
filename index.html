@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Look Salon | Premium Beauty & Bridal Surat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FFFDFB; color: #111111; overflow-x: hidden; }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        .nav-glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(25px); border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+        .service-row { border-bottom: 1px solid rgba(0,0,0,0.08); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .service-row:hover { background-color: #F6EEE9; padding-left: 30px; }
+        .video-wall { columns: 1; gap: 1rem; }
+        @media (min-width: 640px) { .video-wall { columns: 2; } }
+        @media (min-width: 1024px) { .video-wall { columns: 4; } }
+        .video-card { break-inside: avoid; margin-bottom: 1rem; border-radius: 12px; overflow: hidden; background: #000; }
+        .action-bar { background: rgba(17, 17, 17, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-[100] px-8 py-4 flex justify-between items-center nav-glass">
+        <div class="flex items-center gap-6">
+            <img src="Logo.jpg" alt="Luxe Look" class="h-12 w-auto shadow-sm rounded-sm">
+            <div class="h-6 w-[1px] bg-black/20"></div>
+            <span class="text-[11px] uppercase tracking-[0.5em] text-black font-semibold">Surat</span>
+        </div>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.3em] font-bold text-black">
+            <a href="#services" class="hover:text-[#D6B98C] transition-colors">Services</a>
+            <a href="#motion" class="hover:text-[#D6B98C] transition-colors">Portfolio</a>
+            <a href="#founder" class="hover:text-[#D6B98C] transition-colors">Founder</a>
+            <a href="#reviews" class="hover:text-[#D6B98C] transition-colors">Reviews</a>
+        </div>
+    </nav>
+
+    <section class="relative h-[95vh] w-full overflow-hidden flex items-center justify-center bg-black">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
+            <source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321051/Luxe_Look_Saloon_Office_fiue8g.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-[#FFFDFB]"></div>
+        <div class="relative z-10 text-center px-4">
+            <p class="text-[#D6B98C] uppercase tracking-[0.8em] text-[10px] mb-6 font-bold">The Gold Standard of Beauty</p>
+            <h1 class="text-white text-7xl md:text-[9rem] font-serif leading-none tracking-tighter mb-12">LUXE LOOK</h1>
+            <a href="#services" class="text-white/70 text-[10px] uppercase tracking-[0.4em] font-light italic">Scroll to Discover</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-40 px-6 md:px-20 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-20">
+            <div class="md:col-span-4">
+                <h2 class="text-6xl font-serif leading-[0.9]">Mastery in <br><span class="italic text-[#D6B98C]">Detail</span></h2>
+                <p class="mt-10 text-gray-400 text-sm leading-relaxed font-light italic">"Precision is our signature."</p>
+            </div>
+            
+            <div class="md:col-span-8 flex flex-col">
+                <div class="service-row py-12 flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div class="flex flex-col mb-4 md:mb-0">
+                        <span class="text-[9px] text-[#D6B98C] font-bold uppercase tracking-widest mb-2 font-semibold">Artistry</span>
+                        <h3 class="font-serif text-4xl">Hair Artistry</h3>
+                    </div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose md:text-right max-w-sm">
+                        Balayage • Ombre • Keratin Therapy • Straightening • Scalp Conditioning • Scissor & Razor Cuts • Highlighting • Hair Spa
+                    </div>
+                </div>
+
+                <div class="service-row py-12 flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div class="flex flex-col mb-4 md:mb-0">
+                        <span class="text-[9px] text-[#D6B98C] font-bold uppercase tracking-widest mb-2 font-semibold">Couture</span>
+                        <h3 class="font-serif text-4xl">Bridal Studio</h3>
+                    </div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose md:text-right max-w-sm">
+                        Signature Bridal Makeup • HD & Television Finish • Theatre Costume • Photography Ready • Luxury Draping • Pre-Wedding Prep
+                    </div>
+                </div>
+
+                <div class="service-row py-12 flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div class="flex flex-col mb-4 md:mb-0">
+                        <span class="text-[9px] text-[#D6B98C] font-bold uppercase tracking-widest mb-2 font-semibold">Precision</span>
+                        <h3 class="font-serif text-4xl">The Nail Bar</h3>
+                    </div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose md:text-right max-w-sm">
+                        Acrylic & Gel Extensions • 3D Sculpted Art • Chrome Finish • Stiletto Shapes • Medi-Pedi Rituals • Hand & Foot Massage
+                    </div>
+                </div>
+
+                <div class="service-row py-12 flex flex-col md:flex-row justify-between items-start md:items-center group border-none">
+                    <div class="flex flex-col mb-4 md:mb-0">
+                        <span class="text-[9px] text-[#D6B98C] font-bold uppercase tracking-widest mb-2 font-semibold">Aesthetics</span>
+                        <h3 class="font-serif text-4xl">Skin & Tech</h3>
+                    </div>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose md:text-right max-w-sm">
+                        Hydra-Facial • LED Mask Therapy • Anti-Aging • Deep Cleansing • Acne Treatment • Brazilian Waxing • Full Body Grooming
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="motion" class="py-24 bg-[#F6EEE9]/40 px-6">
+        <div class="max-w-[1500px] mx-auto text-center mb-16">
+            <h2 class="text-5xl font-serif text-[#111111]">Luxe in <span class="italic text-[#D6B98C]">Motion</span></h2>
+        </div>
+        <div class="video-wall max-w-[1500px] mx-auto">
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321074/Bridal_2_hltcmb.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321073/Bridal_Makeover_1_g0x4sp.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321067/General_Video_2_ol25ec.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321066/General_video_3_apgvct.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321061/General_Video_h1cl2w.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321037/Technology_xiyteo.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321013/Nails_3_smypkk.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321010/Nails_2_fvuhe8.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321006/Nails_1_ra8x0i.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321004/Nail_4_vfy6ne.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778321001/Medi_Pedi_yzuu5e.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778320926/Hair_3_fyiohd.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778320915/Hair_2_c4uiru.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778320907/Hair_1_cq4dte.mp4" type="video/mp4"></video></div>
+            <div class="video-card"><video autoplay loop muted playsinline class="w-full h-auto"><source src="https://res.cloudinary.com/deeriz38r/video/upload/v1778320886/Bridal_3_zgiyxv.mp4" type="video/mp4"></video></div>
+        </div>
+    </section>
+
+    <div class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] w-[90%] md:w-auto">
+        <div class="action-bar rounded-full px-10 py-5 flex items-center gap-12 shadow-2xl text-white">
+            <div class="hidden md:block">
+                <p class="text-[9px] uppercase tracking-widest opacity-50 font-bold mb-1">SNS Arista, Vesu</p>
+                <p class="text-[11px] font-medium">+91 93287 95883</p>
+            </div>
+            <div class="flex gap-6">
+                <a href="https://wa.me/919328795883" class="bg-[#25D366] text-white px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest">WhatsApp</a>
+                <a href="tel:+919328795883" class="bg-[#D6B98C] text-black px-8 py-3 rounded-full text-[10px] font-bold uppercase tracking-widest">Call Salon</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="founder" class="py-40 px-6 max-w-7xl mx-auto border-t border-black/5">
+        <div class="grid md:grid-cols-2 gap-24 items-center">
+            <img src="Shweta Sharma.jpg" alt="Shweta Sharma" class="rounded-[40px] shadow-2xl">
+            <div>
+                <p class="text-[#D6B98C] font-serif italic text-3xl mb-6">The Visionary</p>
+                <h2 class="text-7xl font-serif mb-12 leading-none">Shweta Sharma</h2>
+                <p class="text-gray-500 text-xl leading-relaxed italic border-l-2 border-[#E8C1B8] pl-10">
+                    "We don't just provide services; we build confidence. Every client is a unique canvas, and at Luxe Look, we unveil the artistry within."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#111111] text-white py-24 px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 items-start">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="Logo.jpg" class="h-16 w-auto mb-8 shadow-lg rounded-md">
+                <p class="text-gray-400 text-sm italic font-light max-w-xs text-center md:text-left">
+                    "Beauty begins the moment you decide to be yourself."
+                </p>
+            </div>
+            <div class="text-center md:text-left">
+                <h4 class="font-serif text-2xl text-[#D6B98C] mb-6">Contact Details</h4>
+                <p class="text-gray-400 text-sm leading-relaxed mb-2 font-light">SNS Arista, G-4, Vesu, Surat, Gujarat 395007</p>
+                <p class="text-white text-sm font-semibold tracking-wider">+91 93287 95883</p>
+            </div>
+            <div class="text-center md:text-left">
+                <h4 class="font-serif text-2xl text-[#D6B98C] mb-6">Hours</h4>
+                <p class="text-gray-400 text-sm font-light">Monday — Sunday</p>
+                <p class="text-white text-sm font-semibold">10:00 AM — 09:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center mt-20 pt-10 border-t border-white/5 text-[10px] uppercase tracking-[0.6em] text-gray-700">
+            © 2026 LUXE LOOK SALON. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".hero-content", { opacity: 0, y: 30, duration: 2, ease: "power4.out" });
+    </script>
+</body>
+</html>
